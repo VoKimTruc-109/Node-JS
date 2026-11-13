@@ -8,7 +8,7 @@ dir
 
 Bước 3: Chạy chương trình
 
-node bt02.js
+node bai02.js
 
 Bước 4: Truy cập trình duyệt
 
