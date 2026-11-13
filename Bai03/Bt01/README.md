@@ -10,7 +10,7 @@ dir
 
 Bước 3: Chạy chương trình
 
-node bt01.js 
+node bai.js 
 
 Bước 4: Kết quả
 
