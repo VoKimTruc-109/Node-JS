@@ -18,24 +18,6 @@ Bước 4: Chạy chương trình
 
 node bai04.js
 
-Bước 5: Kiểm tra kết quả
-
-Chương trình thực hiện:
-
-MongoClient: Kết nối đến MongoDB.
-
-client.db('qlsinhvien'): Chọn database qlsinhvien.
-
-db.collection('students'): Chọn collection students.
-
-insertMany(): Thêm 3 sinh viên vào collection.
-
-find().toArray(): Lấy và hiển thị danh sách sinh viên.
-
-deleteMany({}): Xóa dữ liệu cũ trước khi thêm dữ liệu mới (nếu sử dụng trong chương trình).
-
-client.close(): Đóng kết nối MongoDB.
-
 3. Kết quả
 
 Sau khi chạy lệnh node bai04.js, Terminal hiển thị:
