@@ -15,15 +15,21 @@ Lệnh này thực thi chương trình và hiển thị kết quả tính điể
 Chương trình hiển thị thông tin của 3 sinh viên:
 
 Họ tên: Võ Đình Nam
+
 Điểm trung bình: 8.33
+
 Xếp loại: Giỏi
 
 Họ tên: Lê Hồ Phước Thịnh
+
 Điểm trung bình: 8.00
+
 Xếp loại: Giỏi
 
 Họ tên: Hoàng Đức Duy
+
 Điểm trung bình: 5.00
+
 Xếp loại: Trung bình
 
 *** Kết luận ***
