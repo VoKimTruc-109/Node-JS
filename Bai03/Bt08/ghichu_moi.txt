@@ -1,4 +1,0 @@
-Ho va ten: Vo Kim Truc
-Mon hoc: Phat trien ung dung huong may chu
-Bai tap: Quan ly tap tin voi File System
-Noi dung: Thuc hanh module fs trong Node.js
