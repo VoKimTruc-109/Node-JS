@@ -131,14 +131,18 @@ https://render.com
 Thực hiện các bước:
 
 1. Đăng nhập Render bằng GitHub.
-2. Chọn New → Web Service.
-3. Kết nối repository `Node-JS`.
-4. Cấu hình các thông số:
+3. Chọn New → Web Service.
+4. Kết nối repository `Node-JS`.
+5. Cấu hình các thông số:
 
  Thông số | Giá trị 
+ 
 | Root Directory | `Bai04/Bt01` |
+
 | Build Command | `npm install` |
+
 | Start Command | `npm start` |
+
 | Instance Type | Free |
 
 5. Nhấn Deploy Web Service.
@@ -150,6 +154,7 @@ Sau khi triển khai thành công, Render hiển thị trạng thái:
 
 ```
 Build successful
+
 Your service is live
 ```
 
