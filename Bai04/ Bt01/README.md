@@ -153,9 +153,9 @@ Thực hiện các bước:
 Sau khi triển khai thành công, Render hiển thị trạng thái:
 
 ```
-Build successful
+Build successful 🎉
 
-Your service is live
+Your service is live 🎉
 ```
 
 Website được triển khai THÀNH CÔNG và có thể truy cập qua đường dẫn:
