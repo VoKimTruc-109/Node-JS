@@ -87,10 +87,6 @@ http://localhost:3000/contact
 
 Truy cập một đường dẫn không tồn tại, ví dụ:
 
-http://localhost:3000/abcxyz
-
-Website hiển thị trang thông báo không tìm thấy trang.
-
 http://localhost:3000/abc 
 
 ## PHẦN 2: TRIỂN KHAI WEBSITE TRÊN FREE HOST
@@ -112,11 +108,11 @@ Sau khi khảo sát, lựa chọn Render để triển khai website.
 
 Repository:
 
-https://github.com/VoKimTruc-109/Node-JS/tree/main/Bai04/%20Bt01
+https://github.com/VoKimTruc-109/Node-JS/tree/main
 
 Thư mục chứa ứng dụng:
 
-```text
+```
 Bai04/Bt01
 ```
 
@@ -133,8 +129,7 @@ Thực hiện các bước:
 3. Kết nối repository `Node-JS`.
 4. Cấu hình các thông số:
 
-| Thông số | Giá trị |
-|---|---|
+ Thông số | Giá trị 
 | Root Directory | `Bai04/Bt01` |
 | Build Command | `npm install` |
 | Start Command | `npm start` |
@@ -143,26 +138,18 @@ Thực hiện các bước:
 5. Nhấn Deploy Web Service.
 6. Chờ Render cài đặt thư viện và khởi chạy ứng dụng.
 
-**Ảnh minh họa:**
-
-![Cấu hình Render](screenshots/10-render-config.png)
-
 ### 2.4. Kết quả triển khai
 
 Sau khi triển khai thành công, Render hiển thị trạng thái:
 
-```text
+```
 Build successful
 Your service is live
 ```
 
-Website được triển khai thành công và có thể truy cập qua đường dẫn:
+Website được triển khai THÀNH CÔNG và có thể truy cập qua đường dẫn:
 
 https://node-js-4e4z.onrender.com
-
-**Ảnh minh họa:**
-
-![Deploy thành công trên Render](screenshots/11-render-success.png)
 
 ### 2.5. Kết quả website trên hosting
 
@@ -176,15 +163,10 @@ Website sau khi triển khai có các Route:
 
 Kiểm tra lỗi 404:
 
-https://node-js-4e4z.onrender.com/abcxyz
-
-**Ảnh minh họa:**
-
-![Website cá nhân trên Render](screenshots/12-website-live.png)
+https://node-js-4e4z.onrender.com/abc
 
 ## 3. Kết luận
-
-Qua bài tập, em đã thực hiện được:
+Đã thực hiện:
 
 - Khởi tạo dự án Node.js và cài đặt Express.js.
 - Xây dựng các Route cho website cá nhân.
