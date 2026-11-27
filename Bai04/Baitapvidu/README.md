@@ -1,184 +1,90 @@
 1. Tạo thư mục thực hành và di chuyển vào thư mục:
 cd MyNodeJS\EXPRESS
-3. Tạo ứng dụng Express đầu tiên
+2. Tạo ứng dụng Express đầu tiên
 Bước 1: Khởi tạo dự án
+
 npm init -y
+
 Lệnh tạo package.json, dùng để quản lý thông tin dự án và các thư viện phụ thuộc.
 
-Ảnh minh họa Terminal sau khi khởi tạo:
-
 Bước 2: Cài đặt Express
+
 npm install express
+
 npm tải Express và các gói phụ thuộc vào thư mục node_modules, đồng thời cập nhật package.json và package-lock.json.
-Bước 3: Tạo file app.js
-Tạo file app.js trong thư mục EXPRESS:
-const express = require('express');
-const app = express();
 
-app.get('/', (req, res) => {
-    res.send('Hello, Express!');
-});
+Bước 3: tạo file app.js
 
-app.listen(3000, () => {
-    console.log('Server đang chạy tại http://localhost:3000');
-});
 Bước 4: Chạy ứng dụng
+
 node app.js
+
 Mở trình duyệt tại http://localhost:3000.
 
-Kết quả mong đợi: Trang hiển thị dòng chữ Hello, Express!.
+Kết quả: Trang hiển thị dòng chữ Hello, Express!.
 
-4. Thực hành Route
-Route xác định cách máy chủ phản hồi theo phương thức HTTP và đường dẫn URL. Ví dụ trong bài sử dụng các đường dẫn /, /about, /users và một route mặc định trả về lỗi 404.
+3. Thực hành Route
 
-Tạo file express_route.js:
-const express = require('express');
-const app = express();
+Bước 1: tạo file express_route.js
 
-app.get('/', (req, res) => {
-    res.send('Trang chủ');
-});
+Bước 2: Chạy ứng dụng
 
-app.get('/about', (req, res) => {
-    res.send('Trang giới thiệu');
-});
-
-app.get('/users', (req, res) => {
-    const name = req.query.name;
-    res.send(`Xin chào, ${name}`);
-});
-
-// Route mặc định – đặt sau các route cụ thể
-app.use((req, res) => {
-    res.status(404).send('Không tìm thấy trang');
-});
-
-app.listen(3000, () => {
-    console.log('Server đang chạy tại http://localhost:3000');
-});
-Chạy:
 node express_route.js
+
 Kiểm tra lần lượt các URL:
-URL	Kết quả mong đợi
+
 http://localhost:3000/	Trang chủ
 http://localhost:3000/about	Trang giới thiệu
 http://localhost:3000/users?name=Minh	Xin chào, Minh
-http://localhost:3000/duong-dan-khong-ton-tai	Không tìm thấy trang (HTTP 404)
-
-
-Ảnh kết quả các route:
 
 5. Thực hành Middleware
-Middleware là hàm trung gian được thực thi trong quá trình xử lý request. Middleware có thể đọc hoặc thay đổi req, res, thực hiện ghi log, xác thực… và gọi next() để chuyển sang bước tiếp theo.
 
-Tạo file express_middleware.js:
-const express = require('express');
-const app = express();
+Bước 1: Tạo file express_middleware.js:
 
-// Middleware ghi lại đường dẫn của request
-app.use((req, res, next) => {
-    console.log('Yêu cầu đến:', req.url);
-    next();
-});
+Bước 2: Chạy chương trình
 
-app.get('/', (req, res) => {
-    res.send('Chào mừng đến với ứng dụng Express!');
-});
-
-app.listen(3000, () => {
-    console.log('Server đang chạy tại http://localhost:3000');
-});
-Chạy:
 node express_middleware.js
-Truy cập http://localhost:3000. Mỗi lần tải trang, Terminal sẽ ghi đường dẫn request, ví dụ /.
-
-Kết quả trên trình duyệt:
 
 6. Thực hành Template Engine
-Template engine giúp tạo HTML động từ dữ liệu máy chủ. Bài học minh họa Pug và Handlebars.
 6.1. Pug
-Cài đặt:
+   
+- Cài đặt:
 npm install pug
-Tạo file express_pug.js:
-const express = require('express');
-const app = express();
 
-app.set('view engine', 'pug');
+- Tạo file express_pug.js
 
-app.get('/', (req, res) => {
-    res.render('index', { title: 'My Express App', message: 'Hello, John Doe!' });
-});
-
-app.listen(3000, () => {
-    console.log('Server đang chạy tại http://localhost:3000');
-});
-Tạo thư mục views, bên trong tạo file index.pug:
-doctype html
-html
-  head
-    title= title
-  body
-    h1= message
-Chạy:
+- Chạy chương trình:
 node express_pug.js
+
 Truy cập http://localhost:3000.
 
-Kết quả mong đợi: Trang hiển thị tiêu đề lớn Hello, John Doe!.
+Kết quả: Trang hiển thị tiêu đề lớn Hello, John Doe!.
 
 6.2. Handlebars
+
 Cài đặt:
 npm install express-handlebars
-Nếu phiên bản mới không tương thích với phiên bản Node.js đang dùng, có thể cài một phiên bản tương thích theo hướng dẫn của trang npm.
 
-Ví dụ cấu hình và sử dụng:
-const express = require('express');
-const { engine } = require('express-handlebars');
-const app = express();
+Tạo views/index.handlebars
 
-app.engine('handlebars', engine({
-    layoutsDir: 'views',
-    defaultLayout: false
-}));
-app.set('view engine', 'handlebars');
-
-app.get('/', (req, res) => {
-    res.render('index', {
-        layout: false,
-        title: 'My Express App',
-        message: 'Hello, John Doe!'
-    });
-});
-
-app.listen(3000, () => {
-    console.log('Server đang chạy tại http://localhost:3000');
-});
-Tạo views/index.handlebars:
-<!DOCTYPE html>
-<html>
-<head>
-    <title>{{title}}</title>
-</head>
-<body>
-    <h1>{{message}}</h1>
-</body>
-</html>
 Chạy:
 node express_handlebars.js
-Truy cập http://localhost:3000. Kết quả là trang HTML hiển thị nội dung được truyền từ route vào template.
+
+Truy cập http://localhost:3000
+
+Kết quả là trang HTML hiển thị nội dung được truyền từ route vào template.
 Ghi chú: Đây là ví dụ cấu hình tối giản để minh họa cách render Handlebars. Tùy phiên bản express-handlebars, cú pháp cấu hình có thể khác; xem tài liệu phiên bản đã cài nếu gặp lỗi.
 
 7. Thực hành Error Handling
-Ví dụ xây dựng form nhập số bị chia (dividend) và số chia (divisor). Máy chủ kiểm tra dữ liệu; nếu thiếu dữ liệu hoặc chia cho 0 thì chuyển lỗi tới middleware xử lý lỗi và trả về HTTP 400.
 
 Cài thư viện:
 npm install express body-parser
-Tạo file express_errorhandling.js. Nội dung cốt lõi cần có:
-- Khởi tạo Express và body-parser để đọc dữ liệu form.
-- Route GET / hiển thị form gồm hai ô dividend, divisor.
-- Route POST /divide kiểm tra dữ liệu; nếu không hợp lệ hoặc divisor bằng 0 thì gọi next(error).
-- Middleware xử lý lỗi được khai báo sau các route, nhận tham số (err, req, res, next) và trả về mã 400 cùng thông báo Invalid input.
+
+Tạo file express_errorhandling.js.
+
 Chạy:
 node express_errorhandling.js
+
 Mở http://localhost:3000.
 
 Bước kiểm tra 1 – Form ban đầu:
