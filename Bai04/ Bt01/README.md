@@ -112,7 +112,7 @@ Sau khi khảo sát, lựa chọn Render để triển khai website.
 
 Repository:
 
-https://github.com/VoKimTruc-109/Node-JS
+https://github.com/VoKimTruc-109/Node-JS/tree/main/Bai04/%20Bt01
 
 Thư mục chứa ứng dụng:
 
