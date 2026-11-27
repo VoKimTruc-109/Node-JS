@@ -29,9 +29,13 @@ Sau khi cài đặt, dự án có file `package.json` và `package-lock.json`.
 Trong file `app.js`, sử dụng Express để xây dựng các Route:
  
  / : Trang chủ 
+ 
  /about : Giới thiệu 
+ 
  /skills : Kỹ năng 
+ 
  /hobbies : Sở thích 
+ 
  /contact : Liên hệ 
 
 Các Route sử dụng `res.sendFile()` để trả về các file HTML tương ứng.
