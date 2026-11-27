@@ -99,8 +99,11 @@ http://localhost:3000/abc
 Các dịch vụ hosting miễn phí hỗ trợ Node.js được khảo sát:
 
  Dịch vụ | Đặc điểm 
+ 
  Render | Hỗ trợ Web Service Node.js, triển khai từ GitHub 
+ 
  Railway | Hỗ trợ ứng dụng Node.js, có hạn mức sử dụng miễn phí 
+ 
  Vercel | Hỗ trợ Node.js Functions và website cá nhân 
 
 Sau khi khảo sát, lựa chọn Render để triển khai website.
@@ -159,9 +162,13 @@ https://node-js-4e4z.onrender.com
 Website sau khi triển khai có các Route:
 
 - Trang chủ: https://node-js-4e4z.onrender.com/
+- 
 - Giới thiệu: https://node-js-4e4z.onrender.com/about
+- 
 - Kỹ năng: https://node-js-4e4z.onrender.com/skills
+- 
 - Sở thích: https://node-js-4e4z.onrender.com/hobbies
+- 
 - Liên hệ: https://node-js-4e4z.onrender.com/contact
 
 Kiểm tra lỗi 404:
