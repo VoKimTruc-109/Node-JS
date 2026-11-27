@@ -1,22 +1,5 @@
-1. Mục tiêu bài học
-- Hiểu khái niệm Web Application Framework và vai trò của Express.js.
-- Làm quen mô hình MVC: Model – View – Controller.
-- Tạo ứng dụng Express đầu tiên.
-- Thực hành Route, Middleware, Template Engine và Error Handling.
-- Kết hợp các kiến thức trên để xây dựng ứng dụng máy tính theo mô hình MVC.
-2. Chuẩn bị môi trường
-Cần cài đặt:
-- Node.js (kèm npm).
-- Visual Studio Code.
-- Trình duyệt web.
-Kiểm tra phiên bản trong Terminal:
-node -v
-npm -v
-Tạo thư mục thực hành và di chuyển vào thư mục:
-mkdir MyNodeJS
-cd MyNodeJS
-mkdir EXPRESS
-cd EXPRESS
+1. Tạo thư mục thực hành và di chuyển vào thư mục:
+cd MyNodeJS\EXPRESS
 3. Tạo ứng dụng Express đầu tiên
 Bước 1: Khởi tạo dự án
 npm init -y
