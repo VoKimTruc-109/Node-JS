@@ -34,7 +34,9 @@ node express_route.js
 Kiểm tra lần lượt các URL:
 
 http://localhost:3000/	Trang chủ
+
 http://localhost:3000/about	Trang giới thiệu
+
 http://localhost:3000/users?name=Minh	Xin chào, Minh
 
 5. Thực hành Middleware
