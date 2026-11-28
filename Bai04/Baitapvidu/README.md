@@ -48,6 +48,7 @@ Bước 2: Chạy chương trình
 node express_middleware.js
 
 6. Thực hành Template Engine
+
 6.1. Pug
    
 - Cài đặt:
